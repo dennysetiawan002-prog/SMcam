@@ -2,148 +2,588 @@
 <html lang="id">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
   <meta name="theme-color" content="#10243a">
-  <meta name="description" content="Kamera watermark untuk dokumentasi kunjungan sales.">
+
+  <meta
+    name="description"
+    content="Kamera watermark untuk dokumentasi kunjungan sales."
+  >
+
   <title>Sales Visit Camera</title>
-  <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="icon" href="./icons/icon-192.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css">
+
+  <link
+    rel="manifest"
+    href="./manifest.webmanifest"
+  >
+
+  <link
+    rel="icon"
+    href="./icons/icon-192.svg"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  >
 </head>
+
 <body>
   <div class="app-shell">
+
     <header class="topbar">
       <div class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M4 7.5h3l1.4-2h7.2l1.4 2h3A1.5 1.5 0 0 1 21.5 9v9A1.5 1.5 0 0 1 20 19.5H4A1.5 1.5 0 0 1 2.5 18V9A1.5 1.5 0 0 1 4 7.5Z"/><circle cx="12" cy="13.5" r="4"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path d="M4 7.5h3l1.4-2h7.2l1.4 2h3A1.5 1.5 0 0 1 21.5 9v9A1.5 1.5 0 0 1 20 19.5H4A1.5 1.5 0 0 1 2.5 18V9A1.5 1.5 0 0 1 4 7.5Z"/>
+          <circle cx="12" cy="13.5" r="4"/>
+        </svg>
       </div>
+
       <div class="brand-copy">
         <strong>Sales Visit Camera</strong>
         <span>Kamera dokumentasi kerja</span>
       </div>
-      <button id="settingsTopBtn" class="icon-button" aria-label="Pengaturan" title="Pengaturan">
-        <svg viewBox="0 0 24 24"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/><path d="m19.4 15 .1.1 1.1.9-1.4 2.4-1.4-.6a7.7 7.7 0 0 1-1.5.9l-.2 1.5h-2.8l-.2-1.5a7.7 7.7 0 0 1-1.5-.9l-1.4.6-1.4-2.4 1.1-.9a6.9 6.9 0 0 1 0-1.8l-1.1-.9 1.4-2.4 1.4.6a7.7 7.7 0 0 1 1.5-.9l.2-1.5h2.8l.2 1.5a7.7 7.7 0 0 1 1.5.9l1.4-.6 1.4 2.4-1.1.9a6.9 6.9 0 0 1 0 1.7Z" transform="translate(-1 -1)"/></svg>
+
+      <button
+        id="settingsTopBtn"
+        class="icon-button"
+        aria-label="Pengaturan"
+        title="Pengaturan"
+      >
+        <svg viewBox="0 0 24 24">
+          <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/>
+          <path d="m19.4 15 .1.1 1.1.9-1.4 2.4-1.4-.6a7.7 7.7 0 0 1-1.5.9l-.2 1.5h-2.8l-.2-1.5a7.7 7.7 0 0 1-1.5-.9l-1.4.6-1.4-2.4 1.1-.9a6.9 6.9 0 0 1 0-1.8l-1.1-.9 1.4-2.4 1.4.6a7.7 7.7 0 0 1 1.5-.9l.2-1.5h2.8l.2 1.5a7.7 7.7 0 0 1 1.5.9l1.4-.6 1.4 2.4-1.1.9a6.9 6.9 0 0 1 0 1.8Z"/>
+        </svg>
       </button>
     </header>
 
     <main>
+
       <section id="homeScreen" class="screen active">
-        <div class="hero-card">
-          <div class="hero-eyebrow"><span class="status-dot"></span> SIAP DIGUNAKAN</div>
-          <h1>Dokumentasikan<br>setiap kunjungan.</h1>
-          <p>Ambil foto, tambahkan nama toko dan sales secara profesional, lalu simpan atau bagikan.</p>
-          <div class="profile-pill">
-            <div class="avatar" id="salesAvatar">S</div>
-            <div><small>SALES AKTIF</small><strong id="homeSalesName">Atur nama sales</strong></div>
-            <button id="editProfileBtn" class="text-button">Ubah</button>
-          </div>
+
+        <div class="welcome-block">
+          <span class="eyebrow">DOKUMENTASI KUNJUNGAN</span>
+          <h1>Siap untuk<br>kunjungan berikutnya?</h1>
+          <p>
+            Ambil foto toko dengan informasi kunjungan
+            yang rapi dan profesional.
+          </p>
         </div>
-        <button id="startVisitBtn" class="primary-button large-button">
-          <span class="button-icon"><svg viewBox="0 0 24 24"><path d="M4 7.5h3l1.4-2h7.2l1.4 2h3A1.5 1.5 0 0 1 21.5 9v9A1.5 1.5 0 0 1 20 19.5H4A1.5 1.5 0 0 1 2.5 18V9A1.5 1.5 0 0 1 4 7.5Z"/><circle cx="12" cy="13.5" r="4"/></svg></span>
-          <span><strong>Foto Kunjungan</strong><small>Mulai dokumentasi toko</small></span>
+
+        <div class="profile-card">
+          <div class="avatar" id="salesAvatar">S</div>
+
+          <div>
+            <small>SALES AKTIF</small>
+            <strong id="homeSalesName">Atur nama sales</strong>
+          </div>
+
+          <button id="editProfileBtn" class="text-button">
+            Ubah
+          </button>
+        </div>
+
+        <button
+          id="startVisitBtn"
+          class="primary-button large-button"
+        >
+          <span class="button-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 7.5h3l1.4-2h7.2l1.4 2h3A1.5 1.5 0 0 1 21.5 9v9A1.5 1.5 0 0 1 20 19.5H4A1.5 1.5 0 0 1 2.5 18V9A1.5 1.5 0 0 1 4 7.5Z"/>
+              <circle cx="12" cy="13.5" r="4"/>
+            </svg>
+          </span>
+
+          <span>
+            <strong>Foto Kunjungan</strong>
+            <small>Mulai dokumentasi toko</small>
+          </span>
+
           <span class="arrow">→</span>
         </button>
-        <div class="section-heading"><div><h2>Akses cepat</h2><p>Kelola foto dan profil Anda</p></div></div>
-        <div class="quick-grid">
-          <button id="historyBtn" class="quick-card">
-            <span class="quick-icon blue"><svg viewBox="0 0 24 24"><path d="M3.5 12a8.5 8.5 0 1 0 2.5-6"/><path d="M3.5 4.5v4h4"/><path d="M12 7v5l3 2"/></svg></span>
-            <strong>Riwayat Foto</strong><small>Foto yang tersimpan</small>
-          </button>
-          <button id="settingsBtn" class="quick-card">
-            <span class="quick-icon gold"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19 13.5 1.2.9-1.5 2.6-1.4-.6a7 7 0 0 1-1.5.9l-.2 1.5h-3l-.2-1.5a7 7 0 0 1-1.5-.9l-1.4.6-1.5-2.6 1.2-.9a7 7 0 0 1 0-1.7l-1.2-.9 1.5-2.6 1.4.6a7 7 0 0 1 1.5-.9l.2-1.5h3l.2 1.5a7 7 0 0 1 1.5.9l1.4-.6 1.5 2.6-1.2.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1)"/></svg></span>
-            <strong>Pengaturan</strong><small>Nama dan preferensi</small>
-          </button>
+
+        <div class="section-heading">
+          <div>
+            <h2>Akses cepat</h2>
+            <p>Kelola foto dan profil Anda</p>
+          </div>
         </div>
-        <p class="privacy-note"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Foto dan riwayat disimpan di perangkat Anda.</p>
+
+        <div class="quick-grid">
+
+          <button id="historyBtn" class="quick-card">
+            <span class="quick-icon blue">
+              <svg viewBox="0 0 24 24">
+                <path d="M3.5 12a8.5 8.5 0 1 0 2.5-6"/>
+                <path d="M3.5 4.5v4h4"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+            </span>
+
+            <strong>Riwayat Foto</strong>
+            <small>Foto yang tersimpan</small>
+          </button>
+
+          <button id="settingsBtn" class="quick-card">
+            <span class="quick-icon gold">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="m19 13.5 1.2.9-1.5 2.6-1.4-.6a7 7 0 0 1-1.5.9l-.2 1.5h-3l-.2-1.5a7 7 0 0 1-1.5-.9l-1.4.6-1.5-2.6 1.2-.9a7 7 0 0 1 0-1.7l-1.2-.9 1.5-2.6 1.4.6a7 7 0 0 1 1.5-.9l.2-1.5h3l.2 1.5a7 7 0 0 1 1.5.9l1.4-.6 1.5 2.6-1.2.9a7 7 0 0 1 0 1.7Z" transform="translate(-1 -1)"/>
+              </svg>
+            </span>
+
+            <strong>Pengaturan</strong>
+            <small>Nama dan preferensi</small>
+          </button>
+
+        </div>
+
+        <p class="privacy-note">
+          <svg viewBox="0 0 24 24">
+            <rect x="5" y="10" width="14" height="11" rx="2"/>
+            <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+          </svg>
+          Foto dan riwayat disimpan di perangkat Anda.
+        </p>
+
       </section>
 
       <section id="settingsScreen" class="screen">
-        <div class="page-heading"><button class="back-button" data-back="homeScreen">←</button><div><h1>Pengaturan</h1><p>Atur identitas yang tampil di foto</p></div></div>
+
+        <div class="page-heading">
+          <button class="back-button" data-back="homeScreen">←</button>
+
+          <div>
+            <h1>Pengaturan</h1>
+            <p>Atur identitas yang tampil di foto</p>
+          </div>
+        </div>
+
         <form id="settingsForm" class="panel form-panel">
-          <label for="settingSales">Nama sales <span class="required">*</span></label>
-          <input id="settingSales" name="sales" type="text" maxlength="80" placeholder="Masukkan nama sales" required>
-          <label for="settingCompany">Nama perusahaan <span class="optional">(opsional)</span></label>
-          <input id="settingCompany" name="company" type="text" maxlength="100" placeholder="Nama perusahaan">
-          <p class="field-help">Watermark foto hanya menampilkan nama toko dan nama sales. Nama perusahaan tidak ditambahkan ke watermark.</p>
-          <button class="primary-button full-button" type="submit">Simpan Pengaturan</button>
+
+          <label for="settingSales">
+            Nama sales <span class="required">*</span>
+          </label>
+
+          <input
+            id="settingSales"
+            name="sales"
+            type="text"
+            maxlength="80"
+            placeholder="Masukkan nama sales"
+            required
+          >
+
+          <label for="settingCompany">
+            Nama perusahaan
+            <span class="optional">(opsional)</span>
+          </label>
+
+          <input
+            id="settingCompany"
+            name="company"
+            type="text"
+            maxlength="100"
+            placeholder="Nama perusahaan"
+          >
+
+          <p class="field-help">
+            Watermark menampilkan jam, tanggal, nama perusahaan,
+            nama toko, nama sales, dan lokasi GPS. Informasi dapat
+            diedit sebelum foto disimpan atau dibagikan.
+          </p>
+
+          <button
+            class="primary-button full-button"
+            type="submit"
+          >
+            Simpan Pengaturan
+          </button>
+
         </form>
-        <div class="panel info-panel"><strong>Privasi Anda</strong><p>Foto tidak diunggah ke server. Data pengaturan dan riwayat disimpan di browser pada perangkat ini.</p></div>
+
+        <div class="panel info-panel">
+          <strong>Privasi Anda</strong>
+          <p>
+            Foto tidak diunggah ke server. Data pengaturan dan
+            riwayat disimpan di browser pada perangkat ini.
+          </p>
+        </div>
+
       </section>
 
       <section id="visitScreen" class="screen">
-        <div class="page-heading"><button class="back-button" data-back="homeScreen">←</button><div><h1>Data kunjungan</h1><p>Lengkapi informasi sebelum mengambil foto</p></div></div>
+
+        <div class="page-heading">
+          <button class="back-button" data-back="homeScreen">←</button>
+
+          <div>
+            <h1>Data kunjungan</h1>
+            <p>Lengkapi informasi sebelum mengambil foto</p>
+          </div>
+        </div>
+
         <form id="visitForm" class="panel form-panel">
-          <label for="storeName">Nama toko <span class="required">*</span></label>
-          <input id="storeName" type="text" maxlength="100" placeholder="Contoh: Berkah Jaya" list="storeSuggestions" autocomplete="off" required>
+
+          <label for="storeName">
+            Nama toko <span class="required">*</span>
+          </label>
+
+          <input
+            id="storeName"
+            type="text"
+            maxlength="100"
+            placeholder="Contoh: Berkah Jaya"
+            list="storeSuggestions"
+            autocomplete="off"
+            required
+          >
+
           <datalist id="storeSuggestions"></datalist>
 
-          <label for="visitSales">Nama sales <span class="required">*</span></label>
-          <input id="visitSales" type="text" maxlength="80" required>
+          <label for="visitSales">
+            Nama sales <span class="required">*</span>
+          </label>
 
-          <div class="label-row"><label for="visitLocation">Lokasi / koordinat</label><button type="button" id="getLocationBtn" class="small-outline">◎ Ambil GPS</button></div>
-          <textarea id="visitLocation" rows="2" maxlength="250" placeholder="Ambil GPS atau isi lokasi secara manual"></textarea>
-          <p id="gpsStatus" class="field-help">Lokasi hanya digunakan jika Anda mengisi kolom ini; watermark tidak menampilkan lokasi.</p>
+          <input
+            id="visitSales"
+            type="text"
+            maxlength="80"
+            required
+          >
+
+          <div class="label-row">
+            <label for="visitLocation">Lokasi / koordinat</label>
+
+            <button
+              type="button"
+              id="getLocationBtn"
+              class="small-outline"
+            >
+              ◎ Ambil GPS
+            </button>
+          </div>
+
+          <textarea
+            id="visitLocation"
+            rows="2"
+            maxlength="250"
+            placeholder="Ambil GPS atau isi lokasi secara manual"
+          ></textarea>
+
+          <p id="gpsStatus" class="field-help">
+            Lokasi GPS akan ditampilkan pada watermark jika berhasil diperoleh.
+          </p>
 
           <div class="two-columns">
-            <div><label for="visitDate">Tanggal</label><input id="visitDate" type="date" required></div>
-            <div><label for="visitTime">Waktu</label><input id="visitTime" type="time" required></div>
+            <div>
+              <label for="visitDate">Tanggal</label>
+              <input id="visitDate" type="date" required>
+            </div>
+
+            <div>
+              <label for="visitTime">Waktu</label>
+              <input id="visitTime" type="time" required>
+            </div>
           </div>
-          <button type="button" id="resetDateTimeBtn" class="link-button">Gunakan tanggal dan waktu sekarang</button>
-          <button class="primary-button full-button" type="submit">Lanjut ke Kamera <span>→</span></button>
+
+          <button
+            type="button"
+            id="resetDateTimeBtn"
+            class="link-button"
+          >
+            Gunakan tanggal dan waktu sekarang
+          </button>
+
+          <button
+            class="primary-button full-button"
+            type="submit"
+          >
+            Lanjut ke Kamera <span>→</span>
+          </button>
+
         </form>
+
       </section>
 
       <section id="cameraScreen" class="screen">
-        <div class="page-heading compact-heading"><button class="back-button" data-back="visitScreen">←</button><div><h1>Ambil foto</h1><p id="cameraStoreLabel">Nama toko</p></div></div>
-        <div class="camera-card">
-          <div class="camera-stage" id="cameraStage">
-            <video id="cameraVideo" autoplay playsinline muted></video>
-            <canvas id="captureCanvas" class="hidden"></canvas>
-            <div id="cameraPlaceholder" class="camera-placeholder"><div class="placeholder-camera">◎</div><strong>Kamera siap digunakan</strong><span>Izinkan akses kamera jika diminta browser.</span></div>
-            <div class="camera-top-chip"><span class="live-dot"></span> KAMERA</div>
+
+        <div class="page-heading compact-heading">
+          <button class="back-button" data-back="visitScreen">←</button>
+
+          <div>
+            <h1>Ambil foto</h1>
+            <p id="cameraStoreLabel">Nama toko</p>
           </div>
-          <div class="camera-controls">
-            <button id="switchCameraBtn" class="round-control" type="button" aria-label="Ganti kamera" title="Ganti kamera"><svg viewBox="0 0 24 24"><path d="M7 7h10l2 2h2v9H3V9h2l2-2Z"/><circle cx="12" cy="13" r="3"/><path d="M5 4h5M5 4l2-2M5 4l2 2M19 20h-5m5 0-2-2m2 2-2 2"/></svg></button>
-            <button id="takePhotoBtn" class="shutter-button" type="button" aria-label="Ambil foto"><span></span></button>
-            <button id="uploadPhotoBtn" class="round-control" type="button" aria-label="Pilih foto dari galeri" title="Pilih foto dari galeri"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m4 17 5-5 3 3 3-4 5 6"/></svg></button>
-            <input id="galleryInput" class="hidden" type="file" accept="image/*">
-          </div>
-          <p class="camera-tip">Gunakan tombol tukar kamera untuk memilih kamera depan atau belakang. Foto dari galeri juga bisa diberi watermark.</p>
         </div>
+
+        <div class="camera-card">
+
+          <div class="camera-stage" id="cameraStage">
+
+            <video
+              id="cameraVideo"
+              autoplay
+              playsinline
+              muted
+            ></video>
+
+            <canvas id="captureCanvas" class="hidden"></canvas>
+
+            <div
+              id="cameraPlaceholder"
+              class="camera-placeholder"
+            >
+              <div class="placeholder-camera">◎</div>
+              <strong>Kamera siap digunakan</strong>
+              <span>
+                Izinkan akses kamera jika diminta browser.
+              </span>
+            </div>
+
+            <div class="camera-top-chip">
+              <span class="live-dot"></span>
+              KAMERA
+            </div>
+
+          </div>
+
+          <div class="camera-controls">
+
+            <button
+              id="switchCameraBtn"
+              class="round-control"
+              type="button"
+              aria-label="Ganti kamera"
+              title="Ganti kamera"
+            >
+              <svg viewBox="0 0 24 24">
+                <path d="M7 7h10l2 2h2v9H3V9h2l2-2Z"/>
+                <circle cx="12" cy="13" r="3"/>
+                <path d="M5 4h5M5 4l2-2M5 4l2 2M19 20h-5m5 0-2-2m2 2-2 2"/>
+              </svg>
+            </button>
+
+            <button
+              id="takePhotoBtn"
+              class="shutter-button"
+              type="button"
+              aria-label="Ambil foto"
+            >
+              <span></span>
+            </button>
+
+            <button
+              id="uploadPhotoBtn"
+              class="round-control"
+              type="button"
+              aria-label="Pilih foto dari galeri"
+              title="Pilih foto dari galeri"
+            >
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="16" rx="2"/>
+                <circle cx="8.5" cy="9" r="1.5"/>
+                <path d="m4 17 5-5 3 3 3-4 5 6"/>
+              </svg>
+            </button>
+
+            <input
+              id="galleryInput"
+              class="hidden"
+              type="file"
+              accept="image/*"
+            >
+
+          </div>
+
+          <p class="camera-tip">
+            Gunakan tombol tukar kamera untuk memilih kamera depan
+            atau belakang. Foto dari galeri juga bisa diberi watermark.
+          </p>
+
+        </div>
+
         <div id="cameraError" class="error-box hidden"></div>
+
       </section>
 
       <section id="previewScreen" class="screen">
-        <div class="page-heading compact-heading"><button class="back-button" data-back="cameraScreen">←</button><div><h1>Pratinjau watermark</h1><p>Hanya nama toko dan nama sales</p></div></div>
-        <div class="preview-frame"><canvas id="watermarkCanvas"></canvas></div>
-        <div class="panel form-panel edit-panel">
-          <div class="edit-heading"><strong>Sesuaikan watermark</strong><span class="live-badge">PRATINJAU LANGSUNG</span></div>
-          <label for="editStore">Nama toko</label><input id="editStore" type="text" maxlength="100">
-          <label for="editSales">Nama sales</label><input id="editSales" type="text" maxlength="80">
-          <div class="watermark-options">
-            <div><label for="wmPosition">Posisi watermark</label><select id="wmPosition"><option value="bottom">Bawah</option><option value="top">Atas</option></select></div>
-            <div><label for="wmStyle">Gaya watermark</label><select id="wmStyle"><option value="dark">Gelap profesional</option><option value="light">Terang</option></select></div>
-          </div>
-          <p class="field-help">Watermark ditempel permanen ke file foto saat disimpan atau dibagikan. Anda dapat mengedit nama toko dan sales tanpa mengambil foto ulang.</p>
-          <div class="action-stack">
-            <button id="savePhotoBtn" class="primary-button full-button" type="button">↓ Simpan Foto</button>
-            <button id="sharePhotoBtn" class="secondary-button full-button" type="button">↗ Bagikan Foto</button>
-            <button id="retakeBtn" class="plain-button full-button" type="button">Ambil Foto Ulang</button>
+
+        <div class="page-heading compact-heading">
+          <button class="back-button" data-back="cameraScreen">←</button>
+
+          <div>
+            <h1>Pratinjau watermark</h1>
+            <p>Informasi kunjungan lengkap dengan desain profesional</p>
           </div>
         </div>
+
+        <div class="preview-frame">
+          <canvas id="watermarkCanvas"></canvas>
+        </div>
+
+        <div class="panel form-panel edit-panel">
+
+          <div class="edit-heading">
+            <strong>Sesuaikan watermark</strong>
+            <span class="live-badge">PRATINJAU LANGSUNG</span>
+          </div>
+
+          <label for="editStore">Nama toko</label>
+          <input id="editStore" type="text" maxlength="100">
+
+          <label for="editSales">Nama sales</label>
+          <input id="editSales" type="text" maxlength="80">
+
+          <label for="editCompany">Nama perusahaan</label>
+          <input
+            id="editCompany"
+            type="text"
+            maxlength="100"
+            placeholder="Opsional"
+          >
+
+          <label for="editLocation">Lokasi / koordinat GPS</label>
+          <textarea
+            id="editLocation"
+            rows="2"
+            maxlength="250"
+            placeholder="Koordinat GPS atau lokasi manual"
+          ></textarea>
+
+          <div class="watermark-options">
+            <div>
+              <label for="editDate">Tanggal</label>
+              <input id="editDate" type="date">
+            </div>
+
+            <div>
+              <label for="editTime">Waktu</label>
+              <input id="editTime" type="time" step="1">
+            </div>
+          </div>
+
+          <div class="watermark-options">
+            <div>
+              <label for="wmPosition">Posisi watermark</label>
+
+              <select id="wmPosition">
+                <option value="bottom">Bawah</option>
+                <option value="top">Atas</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="wmStyle">Gaya watermark</label>
+
+              <select id="wmStyle">
+                <option value="dark">Gelap profesional</option>
+                <option value="light">Terang</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="field-help">
+            Watermark ditempel permanen ke file foto saat disimpan
+            atau dibagikan. Informasi dapat diedit tanpa mengambil
+            foto ulang.
+          </p>
+
+          <div class="action-stack">
+
+            <button
+              id="savePhotoBtn"
+              class="primary-button full-button"
+              type="button"
+            >
+              ↓ Simpan Foto
+            </button>
+
+            <button
+              id="sharePhotoBtn"
+              class="secondary-button full-button"
+              type="button"
+            >
+              ↗ Bagikan Foto
+            </button>
+
+            <button
+              id="retakeBtn"
+              class="plain-button full-button"
+              type="button"
+            >
+              Ambil Foto Ulang
+            </button>
+
+          </div>
+
+        </div>
+
       </section>
 
       <section id="historyScreen" class="screen">
-        <div class="page-heading"><button class="back-button" data-back="homeScreen">←</button><div><h1>Riwayat foto</h1><p>Dokumentasi yang tersimpan di perangkat</p></div></div>
-        <div class="history-tools"><input id="historySearch" type="search" placeholder="Cari nama toko..."><button id="clearSearchBtn" class="small-outline" type="button">Hapus filter</button></div>
+
+        <div class="page-heading">
+          <button class="back-button" data-back="homeScreen">←</button>
+
+          <div>
+            <h1>Riwayat foto</h1>
+            <p>Dokumentasi yang tersimpan di perangkat</p>
+          </div>
+        </div>
+
+        <div class="history-tools">
+          <input
+            id="historySearch"
+            type="search"
+            placeholder="Cari nama toko..."
+          >
+
+          <button
+            id="clearSearchBtn"
+            class="small-outline"
+            type="button"
+          >
+            Hapus filter
+          </button>
+        </div>
+
         <div id="historyList" class="history-list"></div>
-        <div id="historyEmpty" class="empty-state"><div>▧</div><strong>Belum ada foto tersimpan</strong><p>Foto yang disimpan akan muncul di sini.</p></div>
+
+        <div id="historyEmpty" class="empty-state">
+          <div>▧</div>
+          <strong>Belum ada foto tersimpan</strong>
+          <p>Foto yang disimpan akan muncul di sini.</p>
+        </div>
+
       </section>
+
     </main>
-    <footer class="app-footer">SALES VISIT CAMERA <span>•</span> Data tersimpan lokal</footer>
+
+    <footer class="app-footer">
+      SALES VISIT CAMERA <span>•</span> Data tersimpan lokal
+    </footer>
+
   </div>
 
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <div id="busyOverlay" class="busy-overlay hidden"><div class="spinner"></div><strong id="busyText">Memproses foto...</strong></div>
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+  <div id="busyOverlay" class="busy-overlay hidden">
+    <div class="spinner"></div>
+    <strong id="busyText">Memproses foto...</strong>
+  </div>
+
   <script src="./app.js"></script>
+
 </body>
 </html>
